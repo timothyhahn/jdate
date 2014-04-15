@@ -1,0 +1,21 @@
+
+<div class="jumbotron">
+  <h1><a href="/">jDate</a></h1>
+  <p class="lead">
+    Wanna meet someone? Huh? Well GOOD.
+  </p>
+</div>
+
+<h3 style="text-align: center;">THE CANDIDATES</h3>
+<hr />
+<div masonry>
+  <div class="masonry-brick" ng-repeat="profile in profiles" style="margin: 5px;">
+    <a href="#/profile/{{ profile._id }}"><img width="200" height="200" ng-src="http://lorempixel.com/200/200/people/{{ profile._id }}/{{ profile.name }}"></img></a>
+    <div>{{ profile.location }}</div>
+  </div>
+</div>
+
+
+<div class="footer">
+  <p>♥ to ♥</p>
+</div>

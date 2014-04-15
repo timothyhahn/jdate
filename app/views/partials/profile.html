@@ -1,0 +1,23 @@
+<h1><a href="/">jDate</a></h1>
+<div class="jumbotron">
+  <img width="500" height="500" ng-src="http://lorempixel.com/500/500/people/{{ profile._id }}">
+  <h2>{{ you.name }}</h2>
+  <p class="lead">
+    <div>{{ you.location }}</div>
+    <div>{{ you.age }}</div>
+  </p>
+</div>
+
+<h3 style="text-align: center;">BEST MATCHES</h3>
+<hr />
+<div masonry>
+  <div class="masonry-brick" ng-repeat="profile in others" style="margin: 5px;">
+    <a href="#/profile/{{ profile._id }}"><img width="200" height="200" ng-src="http://lorempixel.com/200/200/people/{{ profile._id }}/{{ profile.name }}"></img></a>
+    <div>{{ profile.location }}</div>
+  </div>
+</div>
+
+
+<div class="footer">
+  <p>♥ to ♥</p>
+</div>
